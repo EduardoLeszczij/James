@@ -29,7 +29,7 @@ describe("Entregador", () => {
         password: '123456',
         Id: '5916',
         cardId: '#5916',
-        entregador: ' Jorge Amado '
+        entregador: ' Entregador James '
     }
 
     it('transferir entregador', () => {
@@ -49,7 +49,7 @@ describe("Entregador Inválido", () => {
         password: '123456',
         Id: '5916',
         cardId: '#5916',
-        entregador: ' Joãozinho '
+        entregador: ' Entregador James '
     }
 
     it('transferir entregador inválido', () => {
@@ -62,25 +62,25 @@ describe("Entregador Inválido", () => {
     });
 })
 
-before 
-describe("Shopper", () => {
+// before 
+// describe("Shopper", () => {
 
-    var maestro = {
-        email: 'eduardo.leszczij@jamesdelivery.com.br',
-        password: '123456',
-        Id: '5916',
-        cardId: '#5916',
-        shopper: 'Wilson Montelo',
-        excpectedMsg: ' Wilson Montelo '
-    }
+//     var maestro = {
+//         email: 'eduardo.leszczij@jamesdelivery.com.br',
+//         password: '123456',
+//         Id: '5916',
+//         cardId: '#5916',
+//         shopper: 'Wilson Montelo',
+//         excpectedMsg: ' Wilson Montelo '
+//     }
 
-    it('transferir shopper', () => {
+//     it('transferir shopper', () => {
 
-        test.go();
-        test.login(maestro);
-        test.transferirShopper(maestro);
+//         test.go();
+//         test.login(maestro);
+//         test.transferirShopper(maestro);
 
 
-    });
-})
+//     });
+// })
 

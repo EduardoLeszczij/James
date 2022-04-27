@@ -12,6 +12,7 @@ class Teste {
     }
 
     transferirPendencia(maestro) {
+        cy.wait(3000);
         cy.get('input[placeholder="Buscar pedidos por ID ou nomes"').type(maestro.Id);
         cy.contains('.order-card-top__right__id', maestro.cardId).click();
         cy.get('span[class="col-1 detail-header__id"]').should('have.text', '#5916');
@@ -26,7 +27,7 @@ class Teste {
 
         cy.get('button[class="btn btn--neutral"]').click();
         cy.get('.mat-row.cdk-row.ng-star-inserted .mat-cell.cdk-cell.cdk-column-orders.mat-column-orders.ng-star-inserted')
-            .contains('67').click();
+            .contains('54').click();
         cy.get('.confirm-modal__footer button[class="btn btn--success"]').click();
     }
 
@@ -34,11 +35,12 @@ class Teste {
         cy.get('input[placeholder="Buscar pedidos por ID ou nomes"').type(maestro.Id);
         cy.contains('.order-card .order-card-top__right__id', maestro.cardId).click();
         cy.get('span[class="col-1 detail-header__id"]').should('have.text', '#5916');
+        cy.wait(3000)
         cy.get('[type="entregador"] > .order-agents__agent > .order-agents__header > .order-agents__header__icon > .mat-menu-trigger > svg')
             .click();
 
         cy.get('button[role="menuitem"]').contains(' Alocar manualmente ').click({ force: true });
-        cy.get(':nth-child(4) > .cdk-column-name').click();
+        cy.get('tbody td').contains(maestro.entregador).click();
 
         cy.get('span[class="modal-body__title"]').should('have.text', 'Confirmar escolha de Entregador');
         cy.get('.modal-footer__yes-btn button[class="btn btn--success"]').click();
