@@ -15,7 +15,7 @@ class Teste {
         cy.wait(3000);
         cy.get('input[placeholder="Buscar pedidos por ID ou nomes"').type(maestro.Id);
         cy.contains('.order-card-top__right__id', maestro.cardId).click();
-        cy.get('span[class="col-1 detail-header__id"]').should('have.text', '#5916');
+        cy.get('span[class="col-1 detail-header__id"]').should('have.text', '#5951');
         cy.get('button[class="detail-header__pendings__btn"]').click();
         cy.get('span[class="order-issues__title"]').should('have.text', ' pendências deste pedido ');
         cy.get('button[class="btn btn--neutral"]').click();
@@ -27,14 +27,14 @@ class Teste {
 
         cy.get('button[class="btn btn--neutral"]').click();
         cy.get('.mat-row.cdk-row.ng-star-inserted .mat-cell.cdk-cell.cdk-column-orders.mat-column-orders.ng-star-inserted')
-            .contains('54').click();
+            .contains('57').click();
         cy.get('.confirm-modal__footer button[class="btn btn--success"]').click();
     }
 
     tranferirEntregador(maestro) {
         cy.get('input[placeholder="Buscar pedidos por ID ou nomes"').type(maestro.Id);
         cy.contains('.order-card .order-card-top__right__id', maestro.cardId).click();
-        cy.get('span[class="col-1 detail-header__id"]').should('have.text', '#5916');
+        cy.get('span[class="col-1 detail-header__id"]').should('have.text', '#5951');
         cy.wait(3000)
         cy.get('[type="entregador"] > .order-agents__agent > .order-agents__header > .order-agents__header__icon > .mat-menu-trigger > svg')
             .click();
@@ -51,7 +51,7 @@ class Teste {
     transferirShopper(maestro) {
         cy.get('input[placeholder="Buscar pedidos por ID ou nomes"').type(maestro.Id);
         cy.contains('.order-card .order-card-top__right__id', maestro.cardId).click();
-        cy.get('span[class="col-1 detail-header__id"]').should('have.text', '#5916');
+        cy.get('span[class="col-1 detail-header__id"]').should('have.text', '#5951');
         cy.get('[type="shopper"] > .order-agents__agent > .order-agents__header > .order-agents__header__icon > .mat-menu-trigger > svg')
             .click();
         cy.get('button[role="menuitem"]').contains(' Alocar manualmente ').click({ force: true });

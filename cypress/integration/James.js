@@ -6,10 +6,10 @@ import test from '../Pages/Orkestra'
 
 describe("Pendências", () => {
     var maestro = {
-        email: 'eduardo.leszczij@jamesdelivery.com.br',
+        email: 'maestro1@james.com',
         password: '123456',
-        Id: '5916',
-        cardId: '#5916',
+        Id: '5951',
+        cardId: '#5951',
     }
 
     it('transferir pendências', () => {
@@ -25,10 +25,10 @@ describe("Pendências", () => {
 describe("Entregador", () => {
 
     var maestro = {
-        email: 'eduardo.leszczij@jamesdelivery.com.br',
+        email: 'maestro1@james.com',
         password: '123456',
-        Id: '5916',
-        cardId: '#5916',
+        Id: '5951',
+        cardId: '#5951',
         entregador: ' Entregador James '
     }
 
@@ -45,10 +45,10 @@ describe("Entregador", () => {
 describe("Entregador Inválido", () => {
 
     var maestro = {
-        email: 'eduardo.leszczij@jamesdelivery.com.br',
+        email: 'maestro1@james.com',
         password: '123456',
-        Id: '5916',
-        cardId: '#5916',
+        Id: '5951',
+        cardId: '#5951',
         entregador: ' Entregador James '
     }
 
