@@ -70,7 +70,16 @@ class Teste {
 
 
 
+    }  
+
+    pedidoB2B(maestro) {
+
+        cy.wait(3000)
+        cy.get('mat-icon[svgicon="b2b-icon"]').click();
+        cy.wait(3000)
+        cy.get('input[placeholder="ID do pedido"]').type(maestro.Id);
     }
+
 
 }
 export default new Teste;

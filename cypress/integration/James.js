@@ -4,63 +4,63 @@ import test from '../Pages/Orkestra'
 
 
 
-describe("Pendências", () => {
-    var maestro = {
-        email: 'maestro1@james.com',
-        password: '123456',
-        Id: '5951',
-        cardId: '#5951',
-    }
+// describe("Pendências", () => {
+//     var maestro = {
+//         email: 'maestro1@james.com',
+//         password: '123456',
+//         Id: '5951',
+//         cardId: '#5951',
+//     }
 
-    it('transferir pendências', () => {
+//     it('transferir pendências', () => {
 
-        test.go();
-        test.login(maestro);
-        test.transferirPendencia(maestro);
-
-
-    });
-})
-
-describe("Entregador", () => {
-
-    var maestro = {
-        email: 'maestro1@james.com',
-        password: '123456',
-        Id: '5951',
-        cardId: '#5951',
-        entregador: ' Entregador James '
-    }
-
-    it('transferir entregador', () => {
-
-        test.go();
-        test.login(maestro);
-        test.tranferirEntregador(maestro);
+//         test.go();
+//         test.login(maestro);
+//         test.transferirPendencia(maestro);
 
 
-    });
-})
+//     });
+// })
 
-describe("Entregador Inválido", () => {
+// describe("Entregador", () => {
 
-    var maestro = {
-        email: 'maestro1@james.com',
-        password: '123456',
-        Id: '5951',
-        cardId: '#5951',
-        entregador: ' Entregador James '
-    }
+//     var maestro = {
+//         email: 'maestro1@james.com',
+//         password: '123456',
+//         Id: '5951',
+//         cardId: '#5951',
+//         entregador: ' Entregador James '
+//     }
 
-    it('transferir entregador inválido', () => {
+//     it('transferir entregador', () => {
 
-        test.go();
-        test.login(maestro);
-        test.tranferirEntregador(maestro);
+//         test.go();
+//         test.login(maestro);
+//         test.tranferirEntregador(maestro);
 
 
-    });
-})
+//     });
+// })
+
+// describe("Entregador Inválido", () => {
+
+//     var maestro = {
+//         email: 'maestro1@james.com',
+//         password: '123456',
+//         Id: '5951',
+//         cardId: '#5951',
+//         entregador: ' Entregador James '
+//     }
+
+//     it('transferir entregador inválido', () => {
+
+//         test.go();
+//         test.login(maestro);
+//         test.tranferirEntregador(maestro);
+
+
+//     });
+// })
 
 // before 
 // describe("Shopper", () => {
@@ -84,3 +84,19 @@ describe("Entregador Inválido", () => {
 //     });
 // })
 
+describe("Buscar Pedido Modulo B2B", () => {
+
+    var maestro = {
+        email: 'maestro1@james.com',
+        password: '123456',
+        Id: '5951',
+        cardId: '#5951',
+        city: ' Curitiba '
+    }
+
+    it('Buscar-Pedido-B2B', () => {
+        test.go();
+        test.login(maestro);
+        test.pedidoB2B(maestro);
+    });
+})
