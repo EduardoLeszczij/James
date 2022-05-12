@@ -78,6 +78,7 @@ class Teste {
         cy.get('mat-icon[svgicon="b2b-icon"]').click();
         cy.wait(3000)
         cy.get('input[placeholder="ID do pedido"]').type(maestro.Id);
+        cy.get('div[class="order-pending"]').click();
     }
 
 
