@@ -73,12 +73,31 @@ class Teste {
     }  
 
     pedidoB2B(maestro) {
-
         cy.wait(3000)
         cy.get('mat-icon[svgicon="b2b-icon"]').click();
         cy.wait(3000)
         cy.get('input[placeholder="ID do pedido"]').type(maestro.Id);
         cy.get('div[class="order-pending"]').click();
+    }
+
+    addTarifaDinamica(maestro) {
+        cy.get('app-sidebar-button[link="cities"]').click();
+        cy.wait(3000);
+        cy.get('input[data-placeholder="Buscar pelo nome da cidade"]').type(maestro.city);
+        cy.wait(3000);
+        cy.get(':nth-child(1) > .city-card > :nth-child(5) > .col-7 > .mat-focus-indicator > .mat-button-wrapper > .mat-icon > svg > [fill-rule="evenodd"]').click();
+        cy.contains('div[class="delivery-rate-modal__chip-list__chip ng-star-inserted"]', maestro.dynamicTariff).click();
+        cy.contains('div[class="delivery-rate-modal__chip-list__chip ng-star-inserted"]', maestro.time).click();
+        cy.contains(' CONFIRMAR').click({ force: true });
+    }
+
+    cancelTarifaDinamica(maestro) {
+        cy.get('app-sidebar-button[link="cities"]').click();
+        cy.wait(3000);
+        cy.get('input[data-placeholder="Buscar pelo nome da cidade"]').type(maestro.city);
+        cy.wait(3000);
+        cy.get(':nth-child(1) > .city-card > :nth-child(5) > .col-7 > .mat-focus-indicator > .mat-button-wrapper > .mat-icon > svg > [fill-rule="evenodd"]').click();
+        cy.get('button[class="btn btn--warning btn--btn-sm"]').click();
     }
 
 

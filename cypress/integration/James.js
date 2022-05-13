@@ -84,19 +84,51 @@ import test from '../Pages/Orkestra'
 //     });
 // })
 
-describe("Buscar Pedido Modulo B2B", () => {
+// describe("Buscar Pedido Modulo B2B", () => {
+
+//     var maestro = {
+//         email: 'maestro1@james.com',
+//         password: '123456',
+//         Id: '5951',
+//         cardId: '#5951',
+//         city: ' Curitiba '
+//     }
+
+//     it('Buscar-Pedido-B2B', () => {
+//         test.go();
+//         test.login(maestro);
+//         test.pedidoB2B(maestro);
+//     });
+// })
+
+describe('Setar Tarifa Dinâmica', () => {
 
     var maestro = {
-        email: 'maestro1@james.com',
+        email: 'eduardo.leszczij@jamesdelivery.com.br',
         password: '123456',
-        Id: '5951',
-        cardId: '#5951',
-        city: ' Curitiba '
+        city: 'Curitiba',
+        dynamicTariff: ' 1.2 ',
+        time: ' 15 min '
     }
 
-    it('Buscar-Pedido-B2B', () => {
+    it('Adicionar Tarifa Dinâmica', () => {
         test.go();
         test.login(maestro);
-        test.pedidoB2B(maestro);
+        test.addTarifaDinamica(maestro);
+    })
+})
+
+describe('Cancelar Tarifa Dinamica', () => {
+
+    var maestro = {
+        email: 'eduardo.leszczij@jamesdelivery.com.br',
+        password: '123456',
+        city: 'Curitiba'
+    }
+
+    it('Cancelar Tarifa', () => {
+        test.go();
+        test.login(maestro);
+        test.cancelTarifaDinamica(maestro)
     });
 })
