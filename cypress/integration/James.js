@@ -4,43 +4,44 @@ import test from '../Pages/Orkestra'
 
 
 
-// describe("Pendências", () => {
-//     var maestro = {
-//         email: 'maestro1@james.com',
-//         password: '123456',
-//         Id: '5951',
-//         cardId: '#5951',
-//     }
+describe("Pendências", () => {
+    var maestro = {
+        email: 'maestro1@james.com',
+        password: '123456',
+        Id: '5951',
+        cardId: '#5951',
+        user: ' Maestro Madruga Polko '
+    }
 
-//     it('transferir pendências', () => {
+    it('transferir pendências', () => {
 
-//         test.go();
-//         test.login(maestro);
-//         test.transferirPendencia(maestro);
-
-
-//     });
-// })
-
-// describe("Entregador", () => {
-
-//     var maestro = {
-//         email: 'maestro1@james.com',
-//         password: '123456',
-//         Id: '5951',
-//         cardId: '#5951',
-//         entregador: ' Entregador James '
-//     }
-
-//     it('transferir entregador', () => {
-
-//         test.go();
-//         test.login(maestro);
-//         test.tranferirEntregador(maestro);
+        test.go();
+        test.login(maestro);
+        test.transferirPendencia(maestro);
 
 
-//     });
-// })
+    });
+})
+
+describe("Entregador", () => {
+
+    var maestro = {
+        email: 'maestro1@james.com',
+        password: '123456',
+        Id: '5951',
+        cardId: '#5951',
+        entregador: ' Entregador James '
+    }
+
+    it('transferir entregador', () => {
+
+        test.go();
+        test.login(maestro);
+        test.tranferirEntregador(maestro);
+
+
+    });
+})
 
 // describe("Entregador Inválido", () => {
 
@@ -101,34 +102,34 @@ import test from '../Pages/Orkestra'
 //     });
 // })
 
-describe('Setar Tarifa Dinâmica', () => {
+// describe('Setar Tarifa Dinâmica', () => {
 
-    var maestro = {
-        email: 'eduardo.leszczij@jamesdelivery.com.br',
-        password: '123456',
-        city: 'Curitiba',
-        dynamicTariff: ' 1.2 ',
-        time: ' 15 min '
-    }
+//     var maestro = {
+//         email: 'eduardo.leszczij@jamesdelivery.com.br',
+//         password: '123456',
+//         city: 'Curitiba',
+//         dynamicTariff: ' 1.2 ',
+//         time: ' 15 min '
+//     }
 
-    it('Adicionar Tarifa Dinâmica', () => {
-        test.go();
-        test.login(maestro);
-        test.addTarifaDinamica(maestro);
-    })
-})
+//     it('Adicionar Tarifa Dinâmica', () => {
+//         test.go();
+//         test.login(maestro);
+//         test.addTarifaDinamica(maestro);
+//     })
+// })
 
-describe('Cancelar Tarifa Dinamica', () => {
+// describe('Cancelar Tarifa Dinamica', () => {
 
-    var maestro = {
-        email: 'eduardo.leszczij@jamesdelivery.com.br',
-        password: '123456',
-        city: 'Curitiba'
-    }
+//     var maestro = {
+//         email: 'eduardo.leszczij@jamesdelivery.com.br',
+//         password: '123456',
+//         city: 'Curitiba'
+//     }
 
-    it('Cancelar Tarifa', () => {
-        test.go();
-        test.login(maestro);
-        test.cancelTarifaDinamica(maestro)
-    });
-})
+//     it('Cancelar Tarifa', () => {
+//         test.go();
+//         test.login(maestro);
+//         test.cancelTarifaDinamica(maestro)
+//     });
+// })
